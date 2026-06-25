@@ -1,0 +1,1370 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Federal University of Technology Minna - Student Academic Portal">
+  <title>FUT Minna | Student Portal</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/4.4.1/chart.umd.min.js"></script>
+  <link rel="stylesheet" href="css/main.css">
+</head>
+
+<body>
+
+  <!-- ============================================================ -->
+  <!-- LANDING PAGE -->
+  <!-- ============================================================ -->
+  <div id="landing">
+
+    <!-- Navigation -->
+    <nav class="landing-nav" id="landing-nav">
+      <div class="nav-logo">
+        <img
+          src="data:image/png;base64,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"
+          alt="FUT Minna Logo" width="48" height="48" style="border-radius:50%;border:2px solid var(--gold)">
+        <div class="nav-logo-text">
+          <strong>FUT Minna</strong>
+          <span>Technology for Empowerment</span>
+        </div>
+      </div>
+      <div class="nav-links">
+        <a href="#features">Features</a>
+        <a href="#news">News</a>
+        <a href="#about">About</a>
+        <a href="#contact">Contact</a>
+      </div>
+      <div style="display:flex;align-items:center;gap:0.75rem">
+        <button class="btn btn-ghost btn-sm" onclick="showLoginPage()">Sign In</button>
+        <button class="btn btn-primary btn-sm" onclick="showLoginPage()">Student Portal &rarr;</button>
+      </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero">
+      <div class="hero-bg">
+        <img src="https://images.unsplash.com/photo-1541339907198-e08756dedf3f?w=1400&q=80" alt="FUT Minna Campus"
+          class="hero-campus-img" loading="lazy">
+        <div class="hero-orb hero-orb-1"></div>
+        <div class="hero-orb hero-orb-2"></div>
+        <div class="hero-pattern"></div>
+      </div>
+
+      <div class="hero-content">
+        <div class="hero-text">
+          <div class="hero-badge">
+            <span>&#11088;</span>
+            <span>Nigeria&rsquo;s Premier Tech University</span>
+          </div>
+          <h1 class="hero-title">
+            Federal University<br>of Technology,<br>
+            <span class="accent">Minna</span>
+          </h1>
+          <p class="hero-sub">
+            Your gateway to academic excellence. Access course registrations, results, fees, and all essential student
+            services — anytime, anywhere.
+          </p>
+          <div class="hero-ctas">
+            <button class="btn btn-gold btn-lg" onclick="showLoginPage()">
+              &#127979; Access Student Portal
+            </button>
+            <button class="btn btn-outline btn-lg" style="border-color:rgba(255,255,255,0.5);color:white"
+              onclick="document.getElementById('features').scrollIntoView({behavior:'smooth'})">
+              Learn More
+            </button>
+          </div>
+        </div>
+
+        <div class="hero-visual">
+          <div class="hero-card-stack">
+            <div class="hero-main-card">
+              <div class="hero-card-header">
+                <div class="hero-avatar" style="overflow:hidden;padding:0">
+                  <img src="https://images.unsplash.com/photo-1531123897727-8f129e1688ce?w=200&q=80" alt="Student"
+                    style="width:100%;height:100%;object-fit:cover;border-radius:50%">
+                </div>
+                <div class="hero-card-info">
+                  <strong>Adaeze Okonkwo</strong>
+                  <span>Computer Science &bull; 400L</span>
+                </div>
+              </div>
+              <div class="hero-stats-row">
+                <div class="hero-stat">
+                  <div class="hero-stat-num">4.52</div>
+                  <div class="hero-stat-lbl">CGPA</div>
+                </div>
+                <div class="hero-stat">
+                  <div class="hero-stat-num">16</div>
+                  <div class="hero-stat-lbl">Units</div>
+                </div>
+                <div class="hero-stat">
+                  <div class="hero-stat-num">6</div>
+                  <div class="hero-stat-lbl">Courses</div>
+                </div>
+              </div>
+            </div>
+            <div class="hero-float-badge" style="bottom:80px;right:-24px;animation-delay:-2s">
+              &#9989; <span>Registration Open</span>
+            </div>
+            <div class="hero-float-badge" style="top:0px;right:-24px;animation-delay:-4s">
+              &#127942; <span>Honours Student</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Stats Section -->
+    <section class="stats-section">
+      <div class="stats-grid">
+        <div class="stat-item">
+          <div class="stat-num"><span data-count="35000">0</span>+</div>
+          <div class="stat-label">Registered Students</div>
+        </div>
+        <div class="stat-item">
+          <div class="stat-num"><span data-count="120">0</span>+</div>
+          <div class="stat-label">Academic Programmes</div>
+        </div>
+        <div class="stat-item">
+          <div class="stat-num"><span data-count="800">0</span>+</div>
+          <div class="stat-label">Faculty Members</div>
+        </div>
+        <div class="stat-item">
+          <div class="stat-num"><span data-count="40">0</span>+</div>
+          <div class="stat-label">Years of Excellence</div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Features -->
+    <section class="features-section" id="features">
+      <div class="section-tag">&#10024; Portal Features</div>
+      <h2 class="section-title">Everything You Need,<br>All in One Place</h2>
+      <p class="section-sub">Our modern student portal is designed to make your academic journey seamless, accessible,
+        and efficient.</p>
+      <div class="features-grid">
+        <div class="feature-card">
+          <div class="feature-icon">&#128203;</div>
+          <h4>Course Registration</h4>
+          <p>Register your courses seamlessly each semester with real-time unit tracking and advisor approval workflows.
+          </p>
+        </div>
+        <div class="feature-card">
+          <div class="feature-icon">&#128202;</div>
+          <h4>Academic Results</h4>
+          <p>View semester results, GPA trends, and CGPA calculations across all sessions with downloadable transcripts.
+          </p>
+        </div>
+        <div class="feature-card">
+          <div class="feature-icon">&#128179;</div>
+          <h4>Fee Management</h4>
+          <p>Pay school fees securely via multiple channels. View payment history and download official receipts
+            instantly.</p>
+        </div>
+        <div class="feature-card">
+          <div class="feature-icon">&#128197;</div>
+          <h4>Academic Calendar</h4>
+          <p>Stay on top of key dates — exams, registration deadlines, holidays, and important university events.</p>
+        </div>
+        <div class="feature-card">
+          <div class="feature-icon">&#128276;</div>
+          <h4>Smart Notifications</h4>
+          <p>Receive instant alerts for examination timetables, fee reminders, registration updates, and university
+            news.</p>
+        </div>
+        <div class="feature-card">
+          <div class="feature-icon">&#128100;</div>
+          <h4>Student Profile</h4>
+          <p>Manage your personal information, academic records, and contact details all from one secure location.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- News Section -->
+    <section class="news-section" id="news">
+      <div class="news-inner">
+        <div class="section-tag">&#128240; Latest News</div>
+        <h2 class="section-title">University News &amp; Announcements</h2>
+        <div class="news-grid">
+
+          <div class="news-card">
+            <div class="news-img-wrap">
+              <img src="https://images.unsplash.com/photo-1523050854058-8df90110c9f1?w=600&q=80"
+                alt="Graduation ceremony at FUT Minna" loading="lazy">
+            </div>
+            <div class="news-body">
+              <div class="news-meta">
+                <span class="badge badge-purple">Academic</span>
+                <span class="news-date">Nov 12, 2024</span>
+              </div>
+              <h4>2024/2025 First Semester Examination Timetable Released</h4>
+              <p>The Examinations and Records Division has released the timetable for the upcoming semester examinations
+                starting November 25, 2024.</p>
+            </div>
+          </div>
+
+          <div class="news-card">
+            <div class="news-img-wrap">
+              <img src="https://images.unsplash.com/photo-1562774053-701939374585?w=600&q=80"
+                alt="FUT Minna University Building" loading="lazy">
+            </div>
+            <div class="news-body">
+              <div class="news-meta">
+                <span class="badge badge-warning">Achievement</span>
+                <span class="news-date">Nov 8, 2024</span>
+              </div>
+              <h4>FUT Minna Ranked Top 10 Technical Universities in Nigeria</h4>
+              <p>The National Universities Commission (NUC) has ranked FUT Minna among the top 10 technical universities
+                in Nigeria for 2024.</p>
+            </div>
+          </div>
+
+          <div class="news-card">
+            <div class="news-img-wrap">
+              <img src="https://images.unsplash.com/photo-1532094349884-543cd0733932?w=600&q=80"
+                alt="Research Laboratory at FUT Minna" loading="lazy">
+            </div>
+            <div class="news-body">
+              <div class="news-meta">
+                <span class="badge badge-info">Research</span>
+                <span class="news-date">Oct 30, 2024</span>
+              </div>
+              <h4>New AI &amp; Robotics Research Lab Unveiled by Vice-Chancellor</h4>
+              <p>The newly equipped AI and Robotics Research Laboratory was commissioned, opening new frontiers for
+                student and faculty research.</p>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="landing-footer" id="contact">
+      <div class="footer-inner">
+        <div class="footer-grid">
+          <div class="footer-brand">
+            <div style="display:flex;align-items:center;gap:0.875rem;margin-bottom:0.75rem">
+              <img
+                src="data:image/png;base64,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"
+                alt="FUT Minna Logo" width="52" height="52"
+                style="border-radius:50%;border:2px solid rgba(212,175,55,0.6)">
+              <span
+                style="font-family:'Playfair Display',serif;font-size:1rem;font-weight:900;color:white;line-height:1.3">Federal
+                University<br>of Technology, Minna</span>
+            </div>
+            <p class="footer-brand-desc">Nigeria&rsquo;s premier technology university, committed to producing
+              world-class graduates and advancing knowledge through cutting-edge research and innovation.</p>
+            <p style="margin-top:0.75rem;font-size:0.8rem;color:rgba(255,255,255,0.4);font-style:italic">
+              &ldquo;Technology for Empowerment&rdquo;</p>
+          </div>
+          <div class="footer-col">
+            <h5>Student Services</h5>
+            <a href="#" onclick="showLoginPage()">Course Registration</a>
+            <a href="#" onclick="showLoginPage()">Check Results</a>
+            <a href="#" onclick="showLoginPage()">Pay Fees</a>
+            <a href="#" onclick="showLoginPage()">Academic Calendar</a>
+            <a href="#" onclick="showLoginPage()">Student Profile</a>
+          </div>
+          <div class="footer-col">
+            <h5>University</h5>
+            <a href="#">About FUT Minna</a>
+            <a href="#">Faculties &amp; Departments</a>
+            <a href="#">Research &amp; Innovation</a>
+            <a href="#">Admissions</a>
+            <a href="#">Alumni</a>
+          </div>
+          <div class="footer-col" id="about">
+            <h5>Contact Us</h5>
+            <a href="#">&#128205; PMB 65, Minna, Niger State</a>
+            <a href="#">&#128222; +234 66 220 612</a>
+            <a href="#">&#9993;&#65039; info@futminna.edu.ng</a>
+            <a href="#">&#127758; www.futminna.edu.ng</a>
+          </div>
+        </div>
+        <div class="footer-bottom">
+          <span>&copy; 2024 Federal University of Technology, Minna. All rights reserved.</span>
+          <span>Student Portal v2.0 &mdash; Powered by FUTMINNA ICT Directorate</span>
+        </div>
+      </div>
+    </footer>
+  </div>
+  <!-- END LANDING PAGE -->
+
+
+  <!-- ============================================================ -->
+  <!-- LOGIN PAGE -->
+  <!-- ============================================================ -->
+  <div id="login-page">
+    <div class="login-left">
+      <div class="login-bg-shapes">
+        <div class="login-shape login-shape-1"></div>
+        <div class="login-shape login-shape-2"></div>
+        <div class="login-shape login-shape-3"></div>
+      </div>
+      <div class="login-left-content">
+        <img
+          src="data:image/png;base64,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"
+          alt="FUT Minna Logo" width="100" height="100"
+          style="border-radius:50%;border:3px solid rgba(212,175,55,0.6);margin:0 auto 2rem;display:block;background:rgba(255,255,255,0.1)">
+        <div class="login-school">Federal University of Technology, Minna</div>
+        <h2 class="login-tagline">Your <span class="accent">Academic</span><br>Journey Awaits</h2>
+        <p class="login-desc">Access your courses, results, fees, and all academic services through our secure student
+          portal.</p>
+        <div class="login-features">
+          <div class="login-feature">
+            <div class="login-feature-icon">&#128203;</div>
+            <div class="login-feature-text">
+              <strong>Course Registration</strong>
+              <span>Register courses each semester</span>
+            </div>
+          </div>
+          <div class="login-feature">
+            <div class="login-feature-icon">&#128202;</div>
+            <div class="login-feature-text">
+              <strong>View Results &amp; GPA</strong>
+              <span>Track your academic performance</span>
+            </div>
+          </div>
+          <div class="login-feature">
+            <div class="login-feature-icon">&#128179;</div>
+            <div class="login-feature-text">
+              <strong>Fee Payments</strong>
+              <span>Pay and track school fees</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="login-right">
+      <div class="login-form-card">
+        <div style="margin-bottom:1.5rem">
+          <button class="btn btn-ghost btn-sm" onclick="showLanding()" style="padding:0.4rem 0;color:var(--text-light)">
+            &larr; Back to website
+          </button>
+        </div>
+        <div class="login-form-header">
+          <h2>Welcome Back</h2>
+          <p>Sign in to your student account to continue</p>
+        </div>
+        <form class="login-form" id="login-form" novalidate>
+          <div class="form-group">
+            <label class="form-label" for="login-matric">Matriculation Number</label>
+            <div class="input-wrap">
+              <span class="input-icon">&#127979;</span>
+              <input class="form-input" type="text" id="login-matric" placeholder="e.g. 2021/CS/80001PB"
+                autocomplete="username" spellcheck="false" style="padding-left:2.8rem">
+            </div>
+          </div>
+          <div class="form-group">
+            <label class="form-label" for="login-password">Password</label>
+            <div class="password-wrap">
+              <input class="form-input" type="password" id="login-password" placeholder="Enter your password"
+                autocomplete="current-password">
+              <button type="button" class="toggle-password">&#128065;&#65039;</button>
+            </div>
+          </div>
+          <div class="login-extras">
+            <label class="remember-me">
+              <input type="checkbox" id="remember-me"> Remember me
+            </label>
+            <a href="#" class="forgot-link">Forgot Password?</a>
+          </div>
+          <span class="error-msg" id="login-error"></span>
+          <button type="submit" class="login-submit" id="login-submit">Sign In to Portal</button>
+        </form>
+        <div class="login-hint">
+          <strong>Demo credentials:</strong><br>
+          Matric: <strong>2021/CS/80001PB</strong> | Pass: <strong>student123</strong>
+        </div>
+        <div style="text-align:center;margin-top:1.5rem">
+          <div
+            style="display:flex;align-items:center;gap:0.5rem;justify-content:center;font-size:0.78rem;color:var(--text-light)">
+            &#128274; <span>Secured with 256-bit SSL encryption</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- END LOGIN PAGE -->
+
+
+  <!-- ============================================================ -->
+  <!-- MAIN APP -->
+  <!-- ============================================================ -->
+  <div id="app">
+    <div class="app-layout">
+
+      <!-- SIDEBAR -->
+      <aside class="sidebar" id="app-sidebar">
+        <div class="sidebar-header">
+          <img
+            src="data:image/png;base64,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"
+            alt="FUT Minna" width="40" height="40" class="sidebar-logo"
+            style="border-radius:50%;border:2px solid rgba(212,175,55,0.5);flex-shrink:0">
+          <div class="sidebar-brand">
+            <strong>FUT Minna</strong>
+            <span>Student Portal</span>
+          </div>
+          <button class="sidebar-toggle" onclick="toggleSidebar()" title="Toggle Sidebar">&lsaquo;</button>
+        </div>
+        <nav class="sidebar-nav">
+          <div class="nav-group">
+            <div class="nav-group-label">Main</div>
+            <div class="nav-item active" data-page="dashboard">
+              <span class="nav-icon">&#127968;</span>
+              <span class="nav-label">Dashboard</span>
+            </div>
+          </div>
+          <div class="nav-group">
+            <div class="nav-group-label">Academics</div>
+            <div class="nav-item" data-page="courses">
+              <span class="nav-icon">&#128203;</span>
+              <span class="nav-label">Course Registration</span>
+            </div>
+            <div class="nav-item" data-page="results">
+              <span class="nav-icon">&#128202;</span>
+              <span class="nav-label">Results</span>
+            </div>
+            <div class="nav-item" data-page="calendar">
+              <span class="nav-icon">&#128197;</span>
+              <span class="nav-label">Academic Calendar</span>
+            </div>
+          </div>
+          <div class="nav-group">
+            <div class="nav-group-label">Finance</div>
+            <div class="nav-item" data-page="fees">
+              <span class="nav-icon">&#128179;</span>
+              <span class="nav-label">Fees &amp; Payments</span>
+            </div>
+          </div>
+          <div class="nav-group">
+            <div class="nav-group-label">Account</div>
+            <div class="nav-item" data-page="notifications">
+              <span class="nav-icon">&#128276;</span>
+              <span class="nav-label">Notifications</span>
+              <span class="nav-badge notif-count">3</span>
+            </div>
+            <div class="nav-item" data-page="profile">
+              <span class="nav-icon">&#128100;</span>
+              <span class="nav-label">My Profile</span>
+            </div>
+          </div>
+          <div class="nav-group">
+            <div class="nav-group-label">System</div>
+            <div class="nav-item" onclick="openModal('logout-modal')">
+              <span class="nav-icon">&#128682;</span>
+              <span class="nav-label">Logout</span>
+            </div>
+          </div>
+        </nav>
+        <div class="sidebar-footer">
+          <div class="sidebar-user">
+            <div class="user-avatar-sm sb-user-initials" style="overflow:hidden;padding:0">
+              <img id="sidebar-student-photo"
+                src="https://images.unsplash.com/photo-1531123897727-8f129e1688ce?w=200&q=80" alt="Student"
+                style="width:100%;height:100%;object-fit:cover;border-radius:50%">
+            </div>
+            <div class="user-info-sm">
+              <strong class="sb-user-name">Adaeze Okonkwo</strong>
+              <span class="sb-user-dept">Computer Science</span>
+            </div>
+          </div>
+        </div>
+      </aside>
+      <!-- END SIDEBAR -->
+
+      <!-- MAIN CONTENT -->
+      <div class="main-content" id="main-content">
+
+        <!-- TOPBAR -->
+        <header class="topbar">
+          <div class="topbar-left">
+            <button class="topbar-icon-btn mobile-menu-btn" onclick="toggleMobileSidebar()">&#9776;</button>
+            <div>
+              <div class="page-title" id="topbar-title">Dashboard</div>
+              <div class="page-subtitle" id="topbar-subtitle">Welcome back to your portal</div>
+            </div>
+          </div>
+          <div class="topbar-right">
+            <div class="search-bar">
+              <span>&#128269;</span>
+              <input type="text" placeholder="Search anything&hellip;" id="top-search">
+            </div>
+            <div style="display:flex;align-items:center;gap:0.4rem" title="Toggle Dark Mode">
+              <span class="theme-icon" style="font-size:0.9rem">&#127769;</span>
+              <div class="theme-toggle" onclick="toggleTheme()">
+                <div class="theme-toggle-thumb"></div>
+              </div>
+            </div>
+            <button class="topbar-icon-btn" onclick="showPage('notifications')" title="Notifications">
+              &#128276;
+              <span class="topbar-notif-dot"></span>
+            </button>
+            <div class="topbar-avatar" onclick="showPage('profile')" title="View Profile"
+              style="overflow:hidden;padding:0">
+              <img id="topbar-student-photo"
+                src="https://images.unsplash.com/photo-1531123897727-8f129e1688ce?w=200&q=80" alt="Student"
+                style="width:100%;height:100%;object-fit:cover;border-radius:50%">
+            </div>
+          </div>
+        </header>
+        <!-- END TOPBAR -->
+
+        <!-- PAGE CONTENT -->
+        <main class="page-content">
+
+          <!-- ===== DASHBOARD ===== -->
+          <div class="page active" id="page-dashboard">
+            <div class="welcome-banner">
+              <div class="welcome-text">
+                <h2>Good morning, <span id="welcome-name">Student</span>! &#128075;</h2>
+                <p>Here&rsquo;s your academic overview for today.</p>
+                <div class="session-badge">&#128197; <span id="current-session">2024/2025 | Second Semester</span></div>
+              </div>
+              <div class="welcome-visual">
+                <div class="welcome-time" id="live-clock">--:--</div>
+                <div class="welcome-date" id="live-date">Loading...</div>
+              </div>
+            </div>
+
+            <div class="stats-cards">
+              <div class="stat-card stat-card-1">
+                <div class="stat-card-icon">&#128203;</div>
+                <div class="stat-card-value" data-count="6">0</div>
+                <div class="stat-card-label">Registered Courses</div>
+                <div class="stat-card-change up">&#8679; 2nd Semester</div>
+              </div>
+              <div class="stat-card stat-card-2">
+                <div class="stat-card-icon">&#127942;</div>
+                <div class="stat-card-value" data-count="4.52">0.00</div>
+                <div class="stat-card-label">Current CGPA</div>
+                <div class="stat-card-change up">&#8679; 0.04 from last sem</div>
+              </div>
+              <div class="stat-card stat-card-3">
+                <div class="stat-card-icon">&#128179;</div>
+                <div class="stat-card-value">&#8358;68K</div>
+                <div class="stat-card-label">Outstanding Fees</div>
+                <div class="stat-card-change down">3 fees pending</div>
+              </div>
+              <div class="stat-card stat-card-4">
+                <div class="stat-card-icon">&#128218;</div>
+                <div class="stat-card-value" data-count="16">0</div>
+                <div class="stat-card-label">Credit Units Registered</div>
+                <div class="stat-card-change up">&#8679; On track</div>
+              </div>
+            </div>
+
+            <div class="dashboard-grid">
+              <!-- Profile Card -->
+              <div class="card">
+                <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:1.25rem">
+                  <h4>Student Profile</h4>
+                  <button class="btn btn-outline btn-sm" onclick="showPage('profile')">Edit Profile</button>
+                </div>
+                <div class="profile-card">
+                  <div class="profile-avatar" style="overflow:hidden;padding:0;border-radius:var(--radius-md)">
+                    <img src="https://images.unsplash.com/photo-1531123897727-8f129e1688ce?w=200&q=80"
+                      alt="Adaeze Okonkwo" style="width:100%;height:100%;object-fit:cover">
+                    <div class="profile-online"></div>
+                  </div>
+                  <div class="profile-details">
+                    <div class="profile-name">Adaeze Chisom Okonkwo</div>
+                    <div class="profile-mat">FUT/MN/2021/CS/001234</div>
+                    <div class="profile-meta">
+                      <div class="profile-meta-item"><span>Department</span><strong>Computer Science</strong></div>
+                      <div class="profile-meta-item"><span>Level</span><strong>400 Level</strong></div>
+                      <div class="profile-meta-item"><span>Faculty</span><strong>Computing</strong></div>
+                      <div class="profile-meta-item"><span>Status</span><strong><span
+                            class="badge badge-success">Active</span></strong></div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <!-- GPA Chart -->
+              <div class="card">
+                <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:1.25rem">
+                  <h4>GPA Trend</h4>
+                  <span class="badge badge-purple">Last 4 Semesters</span>
+                </div>
+                <div style="height:200px"><canvas id="gpa-chart"></canvas></div>
+              </div>
+            </div>
+
+            <div class="dashboard-grid-3">
+              <div style="display:flex;flex-direction:column;gap:1.5rem">
+                <div class="card">
+                  <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:1.25rem">
+                    <h4>Recent Performance</h4>
+                    <button class="btn btn-ghost btn-sm" onclick="showPage('results')">View All</button>
+                  </div>
+                  <div style="height:180px"><canvas id="perf-chart"></canvas></div>
+                </div>
+
+                <div class="card">
+                  <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:1rem">
+                    <h4>Registered Courses</h4>
+                    <button class="btn btn-ghost btn-sm" onclick="showPage('courses')">Manage</button>
+                  </div>
+                  <div class="course-list">
+                    <div class="course-item"><span class="course-code">CSC 401</span><span class="course-title">Computer
+                        Networks &amp; Security</span><span class="course-units">3 units</span></div>
+                    <div class="course-item"><span class="course-code">CSC 403</span><span
+                        class="course-title">Artificial Intelligence</span><span class="course-units">3 units</span>
+                    </div>
+                    <div class="course-item"><span class="course-code">CSC 405</span><span class="course-title">Software
+                        Engineering II</span><span class="course-units">3 units</span></div>
+                    <div class="course-item"><span class="course-code">CSC 407</span><span class="course-title">Database
+                        Management Systems</span><span class="course-units">3 units</span></div>
+                    <div class="course-item"><span class="course-code">CSC 409</span><span class="course-title">Research
+                        Methods in Computing</span><span class="course-units">2 units</span></div>
+                    <div class="course-item"><span class="course-code">GNS 401</span><span
+                        class="course-title">Communication Skills IV</span><span class="course-units">2 units</span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <div style="display:flex;flex-direction:column;gap:1.5rem">
+                <div class="card">
+                  <h4 style="margin-bottom:1.25rem">Credit Units</h4>
+                  <div style="height:180px"><canvas id="units-chart"></canvas></div>
+                  <div style="text-align:center;margin-top:0.75rem;font-size:0.82rem;color:var(--text-light)">16 of 24
+                    maximum units registered</div>
+                </div>
+
+                <div class="card">
+                  <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:1rem">
+                    <h4>Upcoming Events</h4>
+                    <button class="btn btn-ghost btn-sm" onclick="showPage('calendar')">Calendar</button>
+                  </div>
+                  <div class="event-list">
+                    <div class="event-item">
+                      <div class="event-date">
+                        <div class="event-day">25</div>
+                        <div class="event-month">Nov</div>
+                      </div>
+                      <div class="event-details">
+                        <div class="event-name">First Semester Exams</div>
+                        <div class="event-time">&#128336; 8:00 AM &mdash; All Faculties</div>
+                      </div>
+                    </div>
+                    <div class="event-item">
+                      <div class="event-date">
+                        <div class="event-day">01</div>
+                        <div class="event-month">Nov</div>
+                      </div>
+                      <div class="event-details">
+                        <div class="event-name">2nd Semester Lectures Begin</div>
+                        <div class="event-time">&#128336; 7:30 AM &mdash; All Depts.</div>
+                      </div>
+                    </div>
+                    <div class="event-item">
+                      <div class="event-date" style="background:var(--orange)">
+                        <div class="event-day">15</div>
+                        <div class="event-month">Nov</div>
+                      </div>
+                      <div class="event-details">
+                        <div class="event-name">Course Reg. Deadline</div>
+                        <div class="event-time">&#128204; Don&rsquo;t miss this!</div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="card">
+                  <h4 style="margin-bottom:1rem">Quick Actions</h4>
+                  <div style="display:flex;flex-direction:column;gap:0.5rem">
+                    <button class="btn btn-primary" onclick="showPage('courses')"
+                      style="justify-content:center">&#128203; Register Courses</button>
+                    <button class="btn btn-outline" onclick="showPage('fees')" style="justify-content:center">&#128179;
+                      Pay Fees</button>
+                    <button class="btn btn-ghost" onclick="showPage('results')"
+                      style="justify-content:center;background:var(--lavender-soft)">&#128202; Check Results</button>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- END DASHBOARD -->
+
+
+          <!-- ===== COURSE REGISTRATION ===== -->
+          <div class="page" id="page-courses">
+            <div class="reg-layout">
+              <div>
+                <div class="card" style="margin-bottom:1.25rem">
+                  <div style="display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:1rem">
+                    <div>
+                      <h3 style="font-size:1.2rem;margin-bottom:0.25rem">2024/2025 Second Semester</h3>
+                      <p style="font-size:0.85rem">400 Level &mdash; Computer Science</p>
+                    </div>
+                    <div style="display:flex;gap:0.75rem;flex-wrap:wrap">
+                      <button class="btn btn-outline btn-sm" onclick="printRegistration()">&#128424;&#65039; Print
+                        Slip</button>
+                      <button class="btn btn-primary" onclick="handleCourseRegistration()">&#9989; Submit
+                        Registration</button>
+                    </div>
+                  </div>
+                </div>
+                <div class="card" style="margin-bottom:1.25rem">
+                  <h4 style="margin-bottom:1rem;display:flex;align-items:center;gap:0.5rem">
+                    <span
+                      style="background:var(--lavender-light);color:var(--purple);border-radius:6px;padding:0.2rem 0.6rem;font-size:0.75rem;font-weight:700">C</span>
+                    Compulsory &amp; Elective Courses
+                  </h4>
+                  <div class="table-wrapper">
+                    <table>
+                      <thead>
+                        <tr>
+                          <th style="width:40px">&#10003;</th>
+                          <th>Code</th>
+                          <th>Course Title</th>
+                          <th style="text-align:center">Units</th>
+                          <th>Type</th>
+                        </tr>
+                      </thead>
+                      <tbody id="courses-tbody"></tbody>
+                    </table>
+                  </div>
+                </div>
+                <div class="card" style="background:var(--lavender-soft);border:1px solid var(--lavender-light)">
+                  <h4 style="margin-bottom:0.5rem">&#8505;&#65039; Registration Guidelines</h4>
+                  <ul
+                    style="list-style:disc;padding-left:1.5rem;color:var(--text-mid);font-size:0.875rem;line-height:2">
+                    <li>Minimum credit units per semester: <strong>12 units</strong></li>
+                    <li>Maximum credit units per semester: <strong>24 units</strong></li>
+                    <li>All compulsory courses must be registered</li>
+                    <li>Elective courses can be added up to the maximum limit</li>
+                    <li>Registration deadline: <strong>November 15, 2024</strong></li>
+                    <li>Late registration attracts a fee of &#8358;5,000</li>
+                  </ul>
+                </div>
+              </div>
+
+              <div class="reg-summary">
+                <div class="card" style="margin-bottom:1.25rem">
+                  <h4 style="margin-bottom:1rem">Registration Summary</h4>
+                  <div style="text-align:center;padding:1rem 0">
+                    <div style="font-size:3rem;font-weight:900;font-family:'Playfair Display',serif;color:var(--purple)"
+                      id="unit-count">16</div>
+                    <div style="font-size:0.8rem;color:var(--text-light)">Credit Units Registered</div>
+                  </div>
+                  <div class="units-meter">
+                    <div class="units-fill" id="units-fill" style="width:67%"></div>
+                  </div>
+                  <div
+                    style="display:flex;justify-content:space-between;font-size:0.75rem;color:var(--text-light);margin-bottom:1rem">
+                    <span>0</span><span>Min: 12</span><span>Max: 24</span>
+                  </div>
+                  <div class="reg-summary-item"><span>Courses Selected</span><strong id="course-count">6</strong></div>
+                  <div class="reg-summary-item"><span>Remaining Units</span><strong id="remain-units">8</strong></div>
+                  <div class="reg-summary-item"><span>Semester</span><strong>2nd Semester</strong></div>
+                  <div class="reg-summary-item"><span>Session</span><strong>2024/2025</strong></div>
+                  <div class="reg-summary-item"><span>Deadline</span><strong style="color:var(--orange)">Nov 15,
+                      2024</strong></div>
+                  <button class="btn btn-primary" style="width:100%;justify-content:center;margin-top:1rem"
+                    onclick="handleCourseRegistration()">&#9989; Submit Registration</button>
+                  <button class="btn btn-ghost" style="width:100%;justify-content:center;margin-top:0.5rem"
+                    onclick="printRegistration()">&#128424;&#65039; Print Slip</button>
+                </div>
+                <div class="card" style="background:var(--green-light);border:1px solid rgba(46,125,50,0.2)">
+                  <div style="display:flex;align-items:center;gap:0.75rem">
+                    <span style="font-size:1.5rem">&#9989;</span>
+                    <div>
+                      <div style="font-weight:700;font-size:0.875rem;color:var(--green)">Advisor Approved</div>
+                      <div style="font-size:0.75rem;color:var(--green);opacity:0.8">Dr. A. Mohammed &mdash; Level
+                        Adviser</div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+
+          <!-- ===== RESULTS ===== -->
+          <div class="page" id="page-results">
+            <div style="display:grid;grid-template-columns:1fr 280px;gap:1.5rem;align-items:start">
+              <div>
+                <div class="gpa-display">
+                  <div style="font-size:0.8rem;opacity:0.7;margin-bottom:0.5rem" id="result-sem-info">2022/2023 &bull;
+                    Second Semester</div>
+                  <div class="gpa-num" id="result-gpa-num">4.62</div>
+                  <div style="font-size:1rem;opacity:0.5;margin-top:-0.25rem">/5.00 GPA</div>
+                  <div class="gpa-label">Grade Point Average &mdash; Semester</div>
+                  <div class="cgpa-row">
+                    <div class="cgpa-item">
+                      <div class="cgpa-val" id="result-cgpa-num">4.52</div>
+                      <div class="cgpa-lbl">Cumulative GPA</div>
+                    </div>
+                    <div class="cgpa-item">
+                      <div class="cgpa-val" id="result-total-units">13</div>
+                      <div class="cgpa-lbl">Credit Units</div>
+                    </div>
+                    <div class="cgpa-item">
+                      <div class="cgpa-val">First Class</div>
+                      <div class="cgpa-lbl">Classification</div>
+                    </div>
+                  </div>
+                </div>
+                <div class="semester-tabs" id="results-semesters"></div>
+                <div class="card">
+                  <div
+                    style="display:flex;justify-content:space-between;align-items:center;margin-bottom:1.25rem;flex-wrap:wrap;gap:0.75rem">
+                    <h4>Semester Results</h4>
+                    <div style="display:flex;gap:0.5rem">
+                      <button class="btn btn-outline btn-sm" onclick="downloadResult()">&#128229; Download PDF</button>
+                      <button class="btn btn-ghost btn-sm" onclick="printResult()">&#128424;&#65039; Print</button>
+                    </div>
+                  </div>
+                  <div class="table-wrapper">
+                    <table>
+                      <thead>
+                        <tr>
+                          <th>Code</th>
+                          <th>Course Title</th>
+                          <th style="text-align:center">Units</th>
+                          <th style="text-align:center">Score</th>
+                          <th style="text-align:center">Grade</th>
+                          <th style="text-align:center">Points</th>
+                          <th style="text-align:center">W. Points</th>
+                        </tr>
+                      </thead>
+                      <tbody id="results-tbody"></tbody>
+                    </table>
+                  </div>
+                </div>
+              </div>
+              <div style="display:flex;flex-direction:column;gap:1.25rem">
+                <div class="card">
+                  <h4 style="margin-bottom:1rem">Grading Scale</h4>
+                  <div style="display:flex;flex-direction:column;gap:0.5rem">
+                    <div style="display:flex;justify-content:space-between;font-size:0.82rem;align-items:center"><span
+                        class="grade-badge grade-A">A</span><span>70&ndash;100%</span><strong>5.0 pts</strong></div>
+                    <div style="display:flex;justify-content:space-between;font-size:0.82rem;align-items:center"><span
+                        class="grade-badge grade-B">B</span><span>60&ndash;69%</span><strong>4.0 pts</strong></div>
+                    <div style="display:flex;justify-content:space-between;font-size:0.82rem;align-items:center"><span
+                        class="grade-badge grade-C">C</span><span>50&ndash;59%</span><strong>3.0 pts</strong></div>
+                    <div style="display:flex;justify-content:space-between;font-size:0.82rem;align-items:center"><span
+                        class="grade-badge grade-D">D</span><span>45&ndash;49%</span><strong>2.0 pts</strong></div>
+                    <div style="display:flex;justify-content:space-between;font-size:0.82rem;align-items:center"><span
+                        class="grade-badge grade-F">F</span><span>0&ndash;44%</span><strong>0.0 pts</strong></div>
+                  </div>
+                </div>
+                <div class="card">
+                  <h4 style="margin-bottom:1rem">Classification Scale</h4>
+                  <div style="display:flex;flex-direction:column;gap:0.6rem;font-size:0.82rem">
+                    <div style="display:flex;justify-content:space-between"><span>First Class Honours</span><strong
+                        style="color:var(--green)">4.50&ndash;5.00</strong></div>
+                    <div style="display:flex;justify-content:space-between"><span>Second Class Upper</span><strong
+                        style="color:var(--blue)">3.50&ndash;4.49</strong></div>
+                    <div style="display:flex;justify-content:space-between"><span>Second Class Lower</span><strong
+                        style="color:var(--orange)">2.40&ndash;3.49</strong></div>
+                    <div style="display:flex;justify-content:space-between"><span>Third Class</span><strong
+                        style="color:var(--red)">1.50&ndash;2.39</strong></div>
+                    <div style="display:flex;justify-content:space-between"><span>Pass</span><strong
+                        style="color:var(--gray-600)">1.00&ndash;1.49</strong></div>
+                  </div>
+                </div>
+                <div class="card"
+                  style="background:linear-gradient(135deg,var(--purple-deeper),var(--purple));color:white">
+                  <div style="text-align:center">
+                    <div style="font-size:2rem;margin-bottom:0.25rem">&#127942;</div>
+                    <div
+                      style="font-weight:900;font-size:1rem;font-family:'Playfair Display',serif;color:var(--gold-light)">
+                      First Class Honours</div>
+                    <div style="font-size:0.8rem;color:rgba(255,255,255,0.7);margin-top:0.3rem">CGPA: 4.52 / 5.00</div>
+                    <div style="font-size:0.75rem;color:rgba(255,255,255,0.6);margin-top:0.75rem">Keep it up!
+                      You&rsquo;re on track for graduation with distinction.</div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+
+          <!-- ===== FEES ===== -->
+          <div class="page" id="page-fees">
+            <div class="card"
+              style="background:linear-gradient(135deg,var(--purple-deeper),var(--purple));color:white;margin-bottom:1.5rem">
+              <div style="display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:1rem">
+                <div>
+                  <div style="font-size:0.8rem;color:rgba(255,255,255,0.7);margin-bottom:0.25rem">2024/2025 Academic
+                    Session &mdash; Total Outstanding</div>
+                  <div
+                    style="font-size:2.5rem;font-weight:900;font-family:'Playfair Display',serif;color:var(--gold-light)">
+                    &#8358;68,000</div>
+                  <div style="font-size:0.85rem;color:rgba(255,255,255,0.75);margin-top:0.25rem">Sports, Medical &amp;
+                    Examination fees remaining</div>
+                </div>
+                <div style="text-align:right">
+                  <div style="font-size:0.8rem;color:rgba(255,255,255,0.7);margin-bottom:0.5rem">Total Paid</div>
+                  <div
+                    style="font-size:1.8rem;font-weight:900;font-family:'Playfair Display',serif;color:var(--lavender)">
+                    &#8358;140,000</div>
+                  <button class="btn btn-gold btn-sm" style="margin-top:0.75rem"
+                    onclick="openPaymentModal('Outstanding Fees', 68000)">Pay All Outstanding</button>
+                </div>
+              </div>
+            </div>
+            <h4 style="margin-bottom:1rem">Fee Breakdown &mdash; 2024/2025</h4>
+            <div class="fees-grid" id="fees-grid"></div>
+            <div class="card" style="margin-top:1.5rem">
+              <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:1.25rem">
+                <h4>Payment History</h4>
+                <button class="btn btn-ghost btn-sm"
+                  onclick="showToast('Downloading statement&hellip;','info')">&#128229; Download Statement</button>
+              </div>
+              <div class="table-wrapper">
+                <table>
+                  <thead>
+                    <tr>
+                      <th>Reference</th>
+                      <th>Description</th>
+                      <th>Amount</th>
+                      <th>Date</th>
+                      <th>Channel</th>
+                      <th>Status</th>
+                      <th>Receipt</th>
+                    </tr>
+                  </thead>
+                  <tbody id="payment-history-tbody"></tbody>
+                </table>
+              </div>
+            </div>
+          </div>
+
+
+          <!-- ===== CALENDAR ===== -->
+          <div class="page" id="page-calendar">
+            <div class="calendar-grid">
+              <div>
+                <div class="cal-month">
+                  <div class="cal-header">
+                    <div class="cal-title" id="cal-month-title">November 2024</div>
+                    <div class="cal-nav">
+                      <button class="cal-nav-btn" onclick="calNav(-1)">&#8249;</button>
+                      <button class="cal-nav-btn" onclick="calNav(1)">&#8250;</button>
+                    </div>
+                  </div>
+                  <div class="cal-days-header">
+                    <div class="cal-day-name">Sun</div>
+                    <div class="cal-day-name">Mon</div>
+                    <div class="cal-day-name">Tue</div>
+                    <div class="cal-day-name">Wed</div>
+                    <div class="cal-day-name">Thu</div>
+                    <div class="cal-day-name">Fri</div>
+                    <div class="cal-day-name">Sat</div>
+                  </div>
+                  <div class="cal-days" id="cal-days"></div>
+                  <div style="display:flex;gap:1rem;margin-top:1.25rem;flex-wrap:wrap">
+                    <div style="display:flex;align-items:center;gap:0.4rem;font-size:0.75rem"><span
+                        style="width:8px;height:8px;border-radius:50%;background:var(--gold);display:inline-block"></span>
+                      Has Event</div>
+                    <div style="display:flex;align-items:center;gap:0.4rem;font-size:0.75rem"><span
+                        style="width:8px;height:8px;border-radius:50%;background:var(--purple);display:inline-block"></span>
+                      Today</div>
+                  </div>
+                </div>
+                <div class="card" style="margin-top:1.25rem">
+                  <h4 style="margin-bottom:1rem">2024/2025 Academic Calendar</h4>
+                  <div class="table-wrapper">
+                    <table>
+                      <thead>
+                        <tr>
+                          <th>Date</th>
+                          <th>Event</th>
+                          <th>Type</th>
+                        </tr>
+                      </thead>
+                      <tbody>
+                        <tr>
+                          <td>Nov 1, 2024</td>
+                          <td>2nd Semester Lectures Begin</td>
+                          <td><span class="badge badge-purple">Academic</span></td>
+                        </tr>
+                        <tr>
+                          <td>Nov 15, 2024</td>
+                          <td>Course Registration Deadline</td>
+                          <td><span class="badge badge-warning">Deadline</span></td>
+                        </tr>
+                        <tr>
+                          <td>Nov 25, 2024</td>
+                          <td>1st Semester Examinations Begin</td>
+                          <td><span class="badge badge-danger">Exam</span></td>
+                        </tr>
+                        <tr>
+                          <td>Dec 5, 2024</td>
+                          <td>1st Semester Examinations End</td>
+                          <td><span class="badge badge-danger">Exam</span></td>
+                        </tr>
+                        <tr>
+                          <td>Dec 20, 2024</td>
+                          <td>Christmas Break Begins</td>
+                          <td><span class="badge badge-success">Holiday</span></td>
+                        </tr>
+                        <tr>
+                          <td>Jan 6, 2025</td>
+                          <td>Resumption from Christmas Break</td>
+                          <td><span class="badge badge-purple">Academic</span></td>
+                        </tr>
+                        <tr>
+                          <td>Jan 31, 2025</td>
+                          <td>Extended Registration Deadline</td>
+                          <td><span class="badge badge-warning">Deadline</span></td>
+                        </tr>
+                        <tr>
+                          <td>Mar 15, 2025</td>
+                          <td>Mid-Semester Break</td>
+                          <td><span class="badge badge-success">Holiday</span></td>
+                        </tr>
+                        <tr>
+                          <td>Apr 20, 2025</td>
+                          <td>2nd Semester Examinations Begin</td>
+                          <td><span class="badge badge-danger">Exam</span></td>
+                        </tr>
+                        <tr>
+                          <td>May 10, 2025</td>
+                          <td>2nd Semester Examinations End</td>
+                          <td><span class="badge badge-danger">Exam</span></td>
+                        </tr>
+                        <tr>
+                          <td>May 30, 2025</td>
+                          <td>Convocation Ceremony</td>
+                          <td><span class="badge badge-info">Event</span></td>
+                        </tr>
+                        <tr>
+                          <td>Jun 15, 2025</td>
+                          <td>Long Vacation Begins</td>
+                          <td><span class="badge badge-success">Holiday</span></td>
+                        </tr>
+                      </tbody>
+                    </table>
+                  </div>
+                </div>
+              </div>
+              <div>
+                <div class="card">
+                  <h4 style="margin-bottom:1rem">Upcoming Events</h4>
+                  <div id="upcoming-events"></div>
+                </div>
+                <div class="card"
+                  style="margin-top:1.25rem;background:linear-gradient(135deg,#C62828,#E53935);color:white">
+                  <div style="text-align:center">
+                    <div style="font-size:0.8rem;color:rgba(255,255,255,0.8);margin-bottom:0.5rem">&#9203; EXAM
+                      COUNTDOWN</div>
+                    <div style="font-size:2.5rem;font-weight:900;font-family:'Playfair Display',serif;color:white"
+                      id="exam-days">13</div>
+                    <div style="font-size:0.85rem;color:rgba(255,255,255,0.8)">days until First Semester Exams</div>
+                    <div style="font-size:0.75rem;color:rgba(255,255,255,0.65);margin-top:0.5rem">November 25, 2024
+                    </div>
+                  </div>
+                </div>
+                <div class="card" style="margin-top:1.25rem">
+                  <h4 style="margin-bottom:1rem">Semester Progress</h4>
+                  <div style="font-size:0.85rem;color:var(--text-mid);margin-bottom:0.75rem">Week 8 of 15</div>
+                  <div class="units-meter" style="height:10px">
+                    <div class="units-fill" style="width:53%"></div>
+                  </div>
+                  <div
+                    style="display:flex;justify-content:space-between;margin-top:0.5rem;font-size:0.75rem;color:var(--text-light)">
+                    <span>Sep 2024</span><span>53% Complete</span><span>Jan 2025</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+
+          <!-- ===== NOTIFICATIONS ===== -->
+          <div class="page" id="page-notifications">
+            <div
+              style="display:flex;justify-content:space-between;align-items:center;margin-bottom:1.5rem;flex-wrap:wrap;gap:1rem">
+              <div>
+                <h3 style="font-size:1.2rem;margin-bottom:0.25rem">Notifications</h3>
+                <p style="font-size:0.85rem">Stay updated with the latest announcements</p>
+              </div>
+              <button class="btn btn-outline btn-sm" onclick="markAllRead()">&#10003; Mark All Read</button>
+            </div>
+            <div class="notif-filter">
+              <button class="notif-filter-btn active" onclick="filterNotifications('all', this)">All</button>
+              <button class="notif-filter-btn" onclick="filterNotifications('exam', this)">&#128203; Exams</button>
+              <button class="notif-filter-btn" onclick="filterNotifications('fees', this)">&#128176; Fees</button>
+              <button class="notif-filter-btn" onclick="filterNotifications('academic', this)">&#128218;
+                Academic</button>
+              <button class="notif-filter-btn" onclick="filterNotifications('general', this)">&#128226; General</button>
+            </div>
+            <div class="notif-list" id="notif-list"></div>
+          </div>
+
+
+          <!-- ===== PROFILE ===== -->
+          <div class="page" id="page-profile">
+            <div class="profile-layout">
+              <div>
+                <div class="card profile-sidebar-card">
+                  <div class="profile-photo" id="profile-photo" onclick="handlePhotoUpload()" style="overflow:hidden">
+                    <img src="https://images.unsplash.com/photo-1531123897727-8f129e1688ce?w=200&q=80"
+                      alt="Student Photo" id="profile-photo-img"
+                      style="width:100%;height:100%;object-fit:cover;border-radius:var(--radius-xl)">
+                    <div class="profile-photo-overlay">&#128247; Change Photo</div>
+                  </div>
+                  <div
+                    style="font-size:1.25rem;font-weight:900;font-family:'Playfair Display',serif;margin-bottom:0.25rem"
+                    id="prof-name">Adaeze Chisom Okonkwo</div>
+                  <div style="color:var(--purple);font-size:0.85rem;font-weight:700;margin-bottom:0.5rem" id="prof-mat">
+                    FUT/MN/2021/CS/001234</div>
+                  <div style="color:var(--text-light);font-size:0.82rem;margin-bottom:1rem" id="prof-dept">Computer
+                    Science</div>
+                  <div style="display:flex;justify-content:center;gap:0.5rem;flex-wrap:wrap;margin-bottom:1.25rem">
+                    <span class="badge badge-success" id="prof-status">Active</span>
+                    <span class="badge badge-purple" id="prof-level">400 Level</span>
+                  </div>
+                  <div style="display:grid;grid-template-columns:1fr 1fr;gap:0.75rem;margin-bottom:1.25rem">
+                    <div
+                      style="background:var(--lavender-soft);border-radius:var(--radius-md);padding:0.75rem;text-align:center">
+                      <div
+                        style="font-size:1.5rem;font-weight:900;font-family:'Playfair Display',serif;color:var(--purple)"
+                        id="prof-cgpa">4.52</div>
+                      <div style="font-size:0.7rem;color:var(--text-light)">CGPA</div>
+                    </div>
+                    <div
+                      style="background:var(--lavender-soft);border-radius:var(--radius-md);padding:0.75rem;text-align:center">
+                      <div
+                        style="font-size:1.5rem;font-weight:900;font-family:'Playfair Display',serif;color:var(--green)">
+                        &#127942;</div>
+                      <div style="font-size:0.7rem;color:var(--text-light)">1st Class</div>
+                    </div>
+                  </div>
+                  <button class="btn btn-primary" style="width:100%;justify-content:center"
+                    onclick="openEditProfileModal()">&#9999;&#65039; Edit Profile</button>
+                </div>
+              </div>
+
+              <div style="display:flex;flex-direction:column;gap:1.25rem">
+                <div class="card">
+                  <div class="profile-section-title">&#127979; Academic Information</div>
+                  <div class="profile-info-grid">
+                    <div class="info-field">
+                      <div class="info-label">Matric Number</div>
+                      <div class="info-value" id="prof-mat2">FUT/MN/2021/CS/001234</div>
+                    </div>
+                    <div class="info-field">
+                      <div class="info-label">Department</div>
+                      <div class="info-value" id="prof-dept2">Computer Science</div>
+                    </div>
+                    <div class="info-field">
+                      <div class="info-label">Faculty</div>
+                      <div class="info-value" id="prof-faculty">Computing</div>
+                    </div>
+                    <div class="info-field">
+                      <div class="info-label">Current Level</div>
+                      <div class="info-value" id="prof-level2">400 Level</div>
+                    </div>
+                    <div class="info-field">
+                      <div class="info-label">Current Session</div>
+                      <div class="info-value" id="prof-session">2024/2025</div>
+                    </div>
+                    <div class="info-field">
+                      <div class="info-label">Admission Year</div>
+                      <div class="info-value" id="prof-joined">September, 2021</div>
+                    </div>
+                    <div class="info-field">
+                      <div class="info-label">Hostel</div>
+                      <div class="info-value" id="prof-hostel">Queen Amina Hall</div>
+                    </div>
+                    <div class="info-field">
+                      <div class="info-label">Student Status</div>
+                      <div class="info-value"><span class="badge badge-success" id="prof-status2">Active</span></div>
+                    </div>
+                  </div>
+                </div>
+                <div class="card">
+                  <div class="profile-section-title">&#128100; Personal Information</div>
+                  <div class="profile-info-grid">
+                    <div class="info-field">
+                      <div class="info-label">Full Name</div>
+                      <div class="info-value" id="prof-fullname">Adaeze Chisom Okonkwo</div>
+                    </div>
+                    <div class="info-field">
+                      <div class="info-label">Date of Birth</div>
+                      <div class="info-value" id="prof-dob">15 March, 2002</div>
+                    </div>
+                    <div class="info-field">
+                      <div class="info-label">Gender</div>
+                      <div class="info-value" id="prof-gender">Female</div>
+                    </div>
+                    <div class="info-field">
+                      <div class="info-label">Blood Group</div>
+                      <div class="info-value" id="prof-blood">O+</div>
+                    </div>
+                    <div class="info-field">
+                      <div class="info-label">Nationality</div>
+                      <div class="info-value" id="prof-nationality">Nigerian</div>
+                    </div>
+                    <div class="info-field">
+                      <div class="info-label">State of Origin</div>
+                      <div class="info-value" id="prof-state">Anambra</div>
+                    </div>
+                    <div class="info-field">
+                      <div class="info-label">LGA</div>
+                      <div class="info-value" id="prof-lga">Onitsha</div>
+                    </div>
+                    <div class="info-field">
+                      <div class="info-label">Religion</div>
+                      <div class="info-value">Christianity</div>
+                    </div>
+                  </div>
+                </div>
+                <div class="card">
+                  <div class="profile-section-title">&#128236; Contact Information</div>
+                  <div class="profile-info-grid">
+                    <div class="info-field" style="grid-column:1/-1">
+                      <div class="info-label">Email Address</div>
+                      <div class="info-value" id="prof-email">adaeze.okonkwo@student.futminna.edu.ng</div>
+                    </div>
+                    <div class="info-field">
+                      <div class="info-label">Phone Number</div>
+                      <div class="info-value" id="prof-phone">+234 806 123 4567</div>
+                    </div>
+                    <div class="info-field" style="grid-column:1/-1">
+                      <div class="info-label">Home Address</div>
+                      <div class="info-value" id="prof-address">12 University Road, Minna, Niger State</div>
+                    </div>
+                  </div>
+                </div>
+                <div class="card">
+                  <div class="profile-section-title">&#128106; Parent / Guardian Information</div>
+                  <div class="profile-info-grid">
+                    <div class="info-field">
+                      <div class="info-label">Guardian Name</div>
+                      <div class="info-value" id="prof-guardian">Mr. Charles Okonkwo</div>
+                    </div>
+                    <div class="info-field">
+                      <div class="info-label">Relationship</div>
+                      <div class="info-value" id="prof-guardian-rel">Father</div>
+                    </div>
+                    <div class="info-field">
+                      <div class="info-label">Phone Number</div>
+                      <div class="info-value" id="prof-guardian-phone">+234 803 456 7890</div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+        </main>
+      </div>
+    </div>
+  </div>
+  <!-- END APP -->
+
+  <!-- Mobile Overlay -->
+  <div id="mobile-overlay" class="mobile-overlay"></div>
+
+  <!-- ===== MODALS ===== -->
+  <div class="modal-overlay" id="logout-modal" onclick="if(event.target===this)closeModal('logout-modal')">
+    <div class="modal" style="max-width:420px">
+      <div class="modal-header">
+        <h4>Confirm Logout</h4><button class="btn btn-ghost btn-sm"
+          onclick="closeModal('logout-modal')">&#10005;</button>
+      </div>
+      <div class="modal-body" style="text-align:center;padding:2rem">
+        <div style="font-size:3rem;margin-bottom:1rem">&#128682;</div>
+        <p style="color:var(--text-mid)">Are you sure you want to log out of the student portal? Make sure you&rsquo;ve
+          saved any pending registrations.</p>
+      </div>
+      <div class="modal-footer">
+        <button class="btn btn-ghost" onclick="closeModal('logout-modal')">Cancel</button>
+        <button class="btn btn-primary" onclick="handleLogout()">Yes, Logout</button>
+      </div>
+    </div>
+  </div>
+
+  <div class="modal-overlay" id="payment-modal" onclick="if(event.target===this)closeModal('payment-modal')">
+    <div class="modal">
+      <div class="modal-header">
+        <h4>&#128179; Make Payment</h4><button class="btn btn-ghost btn-sm"
+          onclick="closeModal('payment-modal')">&#10005;</button>
+      </div>
+      <div class="modal-body">
+        <div
+          style="text-align:center;padding:1rem;background:var(--lavender-soft);border-radius:var(--radius-md);margin-bottom:1.5rem">
+          <div style="font-size:0.85rem;color:var(--text-light);margin-bottom:0.25rem" id="payment-modal-title">School
+            Fee</div>
+          <div style="font-size:2.5rem;font-weight:900;font-family:'Playfair Display',serif;color:var(--purple)"
+            id="payment-modal-amount">&#8358;0</div>
+          <div style="font-size:0.75rem;color:var(--text-light);margin-top:0.25rem">2024/2025 Academic Session</div>
+        </div>
+        <div class="payment-steps">
+          <div class="pay-step done">
+            <div class="pay-step-num">1</div>
+            <div class="pay-step-label">Select Fee</div>
+          </div>
+          <div class="pay-step done">
+            <div class="pay-step-num">2</div>
+            <div class="pay-step-label">Channel</div>
+          </div>
+          <div class="pay-step">
+            <div class="pay-step-num">3</div>
+            <div class="pay-step-label">Confirm</div>
+          </div>
+        </div>
+        <div class="form-group" style="margin-bottom:1rem">
+          <label class="form-label">Payment Channel</label>
+          <select class="form-input" id="payment-channel">
+            <option value="">&mdash; Select Payment Channel &mdash;</option>
+            <option value="remita">Remita (Recommended)</option>
+            <option value="paystack">Paystack</option>
+            <option value="bank">Bank Transfer / USSD</option>
+            <option value="card">Debit/Credit Card</option>
+          </select>
+        </div>
+        <div
+          style="background:var(--orange-light);border-radius:var(--radius-md);padding:0.875rem;font-size:0.82rem;color:var(--orange)">
+          &#9888;&#65039; <strong>Demo Mode:</strong> No actual payment will be processed. This is a simulation.
+        </div>
+      </div>
+      <div class="modal-footer">
+        <button class="btn btn-ghost" onclick="closeModal('payment-modal')">Cancel</button>
+        <button class="btn btn-primary" id="pay-now-btn" onclick="processPayment()">Pay Now &rarr;</button>
+      </div>
+    </div>
+  </div>
+
+  <div class="modal-overlay" id="edit-profile-modal" onclick="if(event.target===this)closeModal('edit-profile-modal')">
+    <div class="modal">
+      <div class="modal-header">
+        <h4>&#9999;&#65039; Edit Profile</h4><button class="btn btn-ghost btn-sm"
+          onclick="closeModal('edit-profile-modal')">&#10005;</button>
+      </div>
+      <div class="modal-body">
+        <p style="font-size:0.82rem;color:var(--text-light);margin-bottom:1.5rem">Only contact information can be
+          edited. For changes to academic details, visit the Registry Office.</p>
+        <div style="display:flex;flex-direction:column;gap:1rem">
+          <div class="form-group"><label class="form-label">Email Address</label><input class="form-input" type="email"
+              id="edit-email" placeholder="Your email address"></div>
+          <div class="form-group"><label class="form-label">Phone Number</label><input class="form-input" type="tel"
+              id="edit-phone" placeholder="Your phone number"></div>
+          <div class="form-group"><label class="form-label">Home Address</label><input class="form-input" type="text"
+              id="edit-address" placeholder="Your home address"></div>
+        </div>
+      </div>
+      <div class="modal-footer">
+        <button class="btn btn-ghost" onclick="closeModal('edit-profile-modal')">Cancel</button>
+        <button class="btn btn-primary" onclick="saveProfile()">Save Changes</button>
+      </div>
+    </div>
+  </div>
+
+  <div id="toast-container" class="toast-container"></div>
+  <script src="js/app.js"></script>
+</body>
+
+</html>
