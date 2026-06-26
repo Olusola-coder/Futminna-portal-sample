@@ -23,7 +23,7 @@ I enjoy building responsive, accessible and modern web applications that provide
 
 <p align="center">
 
-<img src="https://skillicons.dev/icons?i=html,css,js,react,tailwind,bootstrap,nodejs,git,github,vscode,figma&perline=6"/>
+<img src="https://skillicons.dev/icons?i=html,css,js,react,tailwind,git,github,vscode,figma&perline=6"/>
 
 </p>
 
